@@ -32,6 +32,18 @@ $insert = mysqli_query($con, "INSERT INTO discussion SET
 user_id  ={$row['user_id']}, 
 project_id ='{$project_id}', 
 `comment` ='{$comment}';");
+
+//if user=sponsor and mark as finished and review=0, able to review;
+//$rating_status = mysqli_fetch_array( mysqli_query($con, "SELECT rating FROM sponsor WHERE user_id  ={$row['user_id']} AND project_id='$project_id';"));     //need to modify the rating para;
+//if ($rating_status['rating']==0)
+//{
+//    $rating_insert = mysqli_query($con, "insert into sponsor SET rating=??????, rating_time=now();");     //need to modify the rating para;
+//}
+//else
+//{
+//    $_SESSION["error_info"] = 'You have rated the project!';
+//    header("Location:Error.php");
+//}
 ?>
 
 <!DOCTYPE html>

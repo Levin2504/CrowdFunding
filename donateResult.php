@@ -53,7 +53,7 @@ if (mysqli_num_rows($who_followed) > 0) {
         mysqli_query($con, "INSERT INTO user_notify SET user_id  ={$tuple['user_id']},notify_id ={$notify_id['notify_id']},if_read='0';");
     }
 } else {
-    echo "No need to update user_notify table";
+//    echo "No need to update user_notify table";
 }
 
 
